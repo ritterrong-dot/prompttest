@@ -5,9 +5,11 @@ prompts:
   - file://./system_prompt.txt
 
 providers:
-  - id: openai:gpt-4o
+  - id: openai:custom
     config:
-      apiKey: $OPENAI_API_KEY
+      apiBase: https://app.wachaoai.com:8120/v1
+      apiKey: ""  # vLLM 一般不需要真实 key
+      model: "Qwen3.5-35B-A3B-FP8"
 
 tests:
   # ============ 工具调用测试 ============
